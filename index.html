@@ -19,7 +19,9 @@
             <p>Soy un joven apasionado por la tecnologia y las nuevas tendencias introduciendome  en la industria laboral del rubro IT</p>
             
             <div class="contact-info">
-                <p>📧 joacodv2003@gmail.com</p>
+                <p>📧
+                    <a class="email" href="mailto:joacodv2003@gmail.com?subject=Hola%20amigo&body=¿Cómo%20estás?"> joacodv2003@gmail.com</a>
+                </p>
                 <p>📱 (294) 431-4006</p>
                 <p>📍 Villa la angostura, Argentina</p>
             </div>
@@ -161,6 +163,10 @@
                         Tecnologias:</strong> HTML, CSS, Vanilla JS</p>
                 </a>
             </div>
+            <div class="arrow-container">
+                <img class="left" src="angulo-izquierdo.png">
+                <img class="right" src="angulo-derecho.png">
+            </div>
         </section>
 
         <section class="section">
@@ -170,5 +176,28 @@
             <p>2025 - Actualidad</p>
         </section>
     </div>
+
+    <script>
+        const projectsContainer = document.querySelector('.projects');
+        const arrowLeft = document.querySelector('.left');
+        const arrowRight = document.querySelector('.right');
+        const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
+        const emailElement = document.querySelector('.email');
+
+        const email = 'joacodv2003@gmail.com';
+        const subject = 'Oferta de empleo';
+        const body = 'Buenas Joaquin hemos visto tu curriculum y estamos interesados en ti';
+        const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        emailElement.href = mailto;
+
+        arrowLeft.addEventListener("click", e => {
+            projectsContainer.scrollLeft -= 316;
+        })
+
+        arrowRight.addEventListener("click", e => {
+            projectsContainer.scrollLeft += 316;
+        })
+        
+    </script>
 </body>
 </html>
