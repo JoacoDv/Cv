@@ -66,7 +66,18 @@ h1, h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    grid-auto-rows: 1fr;
+    overflow-x: auto;
 }
+
+.projects {
+    display: grid;
+    grid-auto-flow: column; /* Fuerza una sola fila */
+    grid-auto-columns: minmax(300px, 1fr); /* Cada columna tendrá un mínimo de 300px */
+    gap: 2rem;
+    overflow-x: auto; /* Scroll horizontal si no caben */
+}
+
 
 .project-card {
     background: white;
