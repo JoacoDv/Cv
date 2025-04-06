@@ -22,7 +22,9 @@
                 <p>📧
                     <a class="email" href="mailto:joacodv2003@gmail.com?subject=Hola%20amigo&body=¿Cómo%20estás?"> joacodv2003@gmail.com</a>
                 </p>
-                <p>📱 (294) 431-4006</p>
+                <p>📱 
+                    <a class="number">(294) 431-4006</a>
+                </p>
                 <p>📍 Villa la angostura, Argentina</p>
             </div>
         </section>
@@ -183,6 +185,12 @@
         const arrowRight = document.querySelector('.right');
         const remInPx = parseFloat(getComputedStyle(document.documentElement).fontSize);
         const emailElement = document.querySelector('.email');
+        const numberElement = document.querySelector('.number');
+
+        const numero = "5492944314006";
+        const mensaje = "Hola,Leimos tu curriculum y estamos interesados en ti.";
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+        numberElement.href=  url
 
         const email = 'joacodv2003@gmail.com';
         const subject = 'Oferta de empleo';
